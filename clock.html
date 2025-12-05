@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- link of the font awesome cdn website-->
+    <link href="  https://fonts.cdnfonts.com/css/digital-7-mono"
+      rel="stylesheet"/>
+    <style>
+      /* Body color */
+      body {
+        background-color: rgb(204, 198, 198);
+      }      
+      /* Size and css styling of the clock */
+      div {
+        color: white;
+        min-height: 200px;
+        width: 1000px;
+        margin: 100px auto;
+        border: 10px solid rgb(20, 20, 22);
+        background-color: rgb(19, 18, 18);
+        box-shadow: 0px 0px 10px 15px rgb(207, 204, 204) inset;
+        border-radius: 20px;
+        font-size: 200px;
+        text-align: center;
+        line-height: 300px;
+        font-family: Digital-7;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <!-- JavaScript code -->
+    <script>
+      function clock() {
+        var box = document.querySelector("div");
+        var d = new Date();
+        var r = d.toLocaleTimeString();
+        box.innerText = r;
+      }
+
+      // Define the intervel of the clock
+      setInterval(clock,1000);
+    </script>
+  </body>
+</html>
